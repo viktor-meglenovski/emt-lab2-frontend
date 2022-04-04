@@ -54,8 +54,8 @@ const BookEdit = (props) => {
                             {props.authors.map((term) => {
                                 if(props.book.author !== undefined &&
                                     props.book.author.id === term.id)
-                                    return <option selected={props.book.author.id} value={term.id}>{term.name}</option>
-                                else return <option value={term.id}>{term.name}</option>
+                                    return <option selected={props.book.author.id} value={term.id}>{term.name+" "+term.surname}</option>
+                                else return <option value={term.id}>{term.name+" "+term.surname}</option>
                             })}
                         </select>
                     </div>
